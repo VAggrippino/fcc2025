@@ -91,3 +91,13 @@ label[for$="star"] {
         filter: grayscale(0);
     }
 }
+
+input[type="radio"][name$="star"],
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
