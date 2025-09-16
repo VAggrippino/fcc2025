@@ -1,20 +1,12 @@
-:root {
-    font-size: 2rem;
-}
-
 main form.survey {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 
-    padding-inline: 0.5rem;
-
     & .field {
-        box-sizing: border-box;
-
         flex: 0 0 100%;
 
-        &:is(.name, .email, .age, .role, .from) {
+        &:is(.name, .email, .age, .role) {
             flex: 1 0 calc(50% - 1rem);
         }
     }
@@ -30,10 +22,6 @@ input, select, textarea {
     font-size: inherit;
 }
 
-textarea {
-    width: 100%;
-}
-
 header {
     display: grid;
     gap: 0 1rem;
@@ -41,9 +29,14 @@ header {
     grid-template-rows: auto auto;
     padding: 1rem;
 
-    & :is(.logo, h1) {
+    & h1 {
         display: grid;
         font-size: 5vw;
+        text-align: center;
+    }
+
+    & .logo {
+        font-size: 6vw;
     }
 
     & .logo {
@@ -62,7 +55,7 @@ header {
     }
 }
 
-.field:is(.name, .email, .age, .role) {
+.field:is(.name, .email, .age, .role, .comments) {
     display: flex;
     flex-direction: column;
 }
